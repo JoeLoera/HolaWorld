@@ -2,29 +2,37 @@
 
 namespace HolaWorld
 {
-    //Class names like ClientActivity
-    //Try to use nouns when naming classes. Examples: Employee, BusinessDate
+
     internal class Program
     {
-        //Method name like CalculativeValue
-        //method arguments like firstNumber
         static void Main(string[] args)
         {
-            //local variables like itemCount
+            //implicit conversion
+            int num = 12390532;
+            long bigNum = num;
 
-            //use userControl isntead of userCtr
+            float myFloat = 13.37f;
+            double myNewDouble = myFloat;
 
-            //don't user numbers at hte start of variable names
+            double myDouble = 13.37;
+            int myInt;
+            //explicit conversion
+            // cast double to int;
+            myInt = (int)myDouble;
 
-            //Correct
-            string myName;
-            int lastNum;
-            bool isSaved;
+            //type conversion
+            //Converts myDouble to a string
+            string myString = myDouble.ToString(); //13.37
+            //Converts myFloat to a string
+            string myFloatString = myFloat.ToString(); //13.37
+            //Converts bool sunIsShining to a string
+            bool sunIsShining = false;
 
-            //Avoid
-            //String myName
-            //Int32 lastNum;
-            //Boolean isSaved;
+            string myBoolString = sunIsShining.ToString();
+
+
+            Console.WriteLine(myBoolString);
+            Console.Read();
         }
     }
 }
