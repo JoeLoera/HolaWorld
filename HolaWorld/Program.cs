@@ -1,28 +1,30 @@
-﻿//When a system is being used, it is highlighted. When it is not in use, it is greyed out.
-//Removing System will cause errors because it will not recognize console
-//We must include using System; namespace in order to use Console.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
+﻿using System;
 
 namespace HolaWorld
 {
+    //Class names like ClientActivity
+    //Try to use nouns when naming classes. Examples: Employee, BusinessDate
     internal class Program
     {
-        //starting point of our program
+        //Method name like CalculativeValue
+        //method arguments like firstNumber
         static void Main(string[] args)
         {
-            //Changing the color properties of the console
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.Clear();
-            Console.WriteLine("Hello Joe");
-            Console.WriteLine("C# is cool!");
-            Console.Read();
+            //local variables like itemCount
+
+            //use userControl isntead of userCtr
+
+            //don't user numbers at hte start of variable names
+
+            //Correct
+            string myName;
+            int lastNum;
+            bool isSaved;
+
+            //Avoid
+            //String myName
+            //Int32 lastNum;
+            //Boolean isSaved;
         }
     }
 }
