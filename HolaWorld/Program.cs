@@ -34,6 +34,12 @@ namespace HolaWorld
             double dDiv = d1 / d2;
             Console.WriteLine("d1/d2 is " + dDiv);
 
+            //adding at the end of the value specifies that we are working with a float
+            //Without the f the program will think we are trying to write a double
+            float f1 = 3.1415f;
+            float f2 = 5.1f;
+            float fDiv = f1 / f2;
+            Console.WriteLine("f1 / f2 is " + fDiv);
             Console.Read();
 
 
