@@ -18,9 +18,8 @@ namespace HolaWorld
 
             //declaring and initializing a variable in one go
             int num2 = 23;
-            
             num2 = 100;
-            
+
             //sum will be used to add the sum of the two integer variables
             //int sum = num1 + num2;
 
@@ -40,6 +39,9 @@ namespace HolaWorld
             float f2 = 5.1f;
             float fDiv = f1 / f2;
             Console.WriteLine("f1 / f2 is " + fDiv);
+
+            double dIDiv = d1 / num1;
+            Console.WriteLine("d1 / num1 is " + dIDiv);
             Console.Read();
 
 
