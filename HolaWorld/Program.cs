@@ -18,7 +18,10 @@ namespace HolaWorld
             //sum will be used to add the sum of the two integer variables
             int sum = num1 + num2;
 
-            Console.WriteLine(sum);
+            //using concatination
+            Console.WriteLine("num1 is " + num1);
+            Console.WriteLine("num1 " + num1 + " + num2 " + num2 + " is " + sum);
+            Console.Read();
 
 
         }
