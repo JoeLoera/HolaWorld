@@ -7,19 +7,14 @@ namespace HolaWorld
     {
         static void Main(string[] args)
         {
-            string myString = "15";
-            string mySecondString = "13";
-            //parse converts a string to it's 32 bit equivalent
-            //This will create an int out of 15
-            int num1 = Int32.Parse(myString);
-            //parse converts a string to it's 32 bit equivalent
-            //This will create an int out of 13
-            int num2 = Int32.Parse(mySecondString);
-            int result = num1 + num2;
-            
+            //defining the variables variables
+            int age = 29;
+            string name = "Joseph";
 
-            Console.WriteLine(result);
-            Console.ReadLine();
+            //1.string concatenation
+            Console.WriteLine("String Concatenation");
+            Console.WriteLine("Hello my name is " + name + ", I am " + age + " years old");
+
         }
     }
 }
