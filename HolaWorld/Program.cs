@@ -7,32 +7,19 @@ namespace HolaWorld
     {
         static void Main(string[] args)
         {
-            //implicit conversion
-            int num = 12390532;
-            long bigNum = num;
+            string myString = "15";
+            string mySecondString = "13";
+            //parse converts a string to it's 32 bit equivalent
+            //This will create an int out of 15
+            int num1 = Int32.Parse(myString);
+            //parse converts a string to it's 32 bit equivalent
+            //This will create an int out of 13
+            int num2 = Int32.Parse(mySecondString);
+            int result = num1 + num2;
+            
 
-            float myFloat = 13.37f;
-            double myNewDouble = myFloat;
-
-            double myDouble = 13.37;
-            int myInt;
-            //explicit conversion
-            // cast double to int;
-            myInt = (int)myDouble;
-
-            //type conversion
-            //Converts myDouble to a string
-            string myString = myDouble.ToString(); //13.37
-            //Converts myFloat to a string
-            string myFloatString = myFloat.ToString(); //13.37
-            //Converts bool sunIsShining to a string
-            bool sunIsShining = false;
-
-            string myBoolString = sunIsShining.ToString();
-
-
-            Console.WriteLine(myBoolString);
-            Console.Read();
+            Console.WriteLine(result);
+            Console.ReadLine();
         }
     }
 }
