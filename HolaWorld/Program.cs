@@ -13,18 +13,21 @@ namespace HolaWorld
             Console.WriteLine("Please enter your name and press enter: ");
             //assign the entered string to variable grogu
             grogu = Console.ReadLine();
-            //Print the new entered value of grogu
-            Console.WriteLine(grogu);
-            //Converts the grogu string to uppercase
-            Console.WriteLine(grogu.ToUpper());
-            //Convert the grogu string to lowercase
-            Console.WriteLine(grogu.ToLower());
-            //Trim the white space before and after the string
-            Console.WriteLine(grogu.Trim());
-            //Still having an issue with the substring
-            string groguSubString = String.Format("Substring value : {0}", groguSubString.Substring) (0,5);
-
-
-        }
+            //convert the string to uppercase
+            string groguUpperCase = String.Format("Upper case: {0}", grogu.ToUpper());
+            //Print the string groguUpperCase
+            Console.WriteLine(groguUpperCase);
+            //convert the string to lowercase
+            string groguLowerCase = String.Format("Lower case: {0}", grogu.ToLower());
+            //Print the groguLowerCase string variable
+            Console.Write(groguLowerCase);
+            //Trim the groguTrim variable
+            string groguTrim = String.Format("Trim: {0}", grogu.Trim());
+            //print the trimmed version of the string. Remove white space before and after the string
+            Console.WriteLine(groguTrim);
+            //Substring
+            string groguSubString = String.Format("SubString: {0}", grogu.Substring(3,5));
+            Console.WriteLine(groguSubString);
+        }   
     }
 }
