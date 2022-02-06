@@ -5,22 +5,23 @@ namespace HolaWorld
 
     class Program
     {
- 
+
         static void Main(string[] args)
         {
-            //WriteSomething(); method cannot be called from out main method because our main method is static. WriteSomething(); method must also be static
-            WriteSomething();
-            WriteSomethingSpecific("I am an argument");
-        }
-        //access modifier (static) return type method name (parameter, 1 parameter 2 )
-        public static void WriteSomething()
-        {
-            Console.WriteLine("I am called from a method");
-        }
+            //One way to use the method and print the result
+            //int result = Add(15, 31);
+            //Console.WriteLine(result);
+            //Console.Read();
 
-        public static void WriteSomethingSpecific(string myText)
+            //Another way to get a result using the Add method I created
+            Console.WriteLine(Add(15, 31));
+            //You can also use the method multiple times:
+            Console.WriteLine(Add(Add(1,4), Add(1, 5)));
+            Console.Read();
+        }
+        public static int Add(int num1, int num2)
         {
-            Console.WriteLine(myText);
+            return num1 + num2;
         }
     }
 }
