@@ -8,34 +8,18 @@ namespace HolaWorld
 
         static void Main(string[] args)
         {
-            //One way to use the method and print the result
-            //int result = Add(15, 31);
-            //Console.WriteLine(result);
-            //Console.Read();
+            string friend1 = "Frank";
+            string friend2 = "Kevin";
+            string friend3 = "Julie";
 
-            //Another way to get a result using the Add method I created
-            Console.WriteLine(Add(15, 31));
-            //You can also use the method multiple times:
-            Console.WriteLine(Add(Add(1,4), Add(1, 5)));
-            
-            //Challenge, create a method that multiplies 2 numbers together and print the result
-            Console.WriteLine(Multiple(23, 4));
-            //Create a method that divides two numbers
-            Console.WriteLine(Divide(46,5));
+            GreetFriend(friend1);
+            GreetFriend(friend2);
+            GreetFriend(friend3);
             Console.Read();
-
         }
-        public static int Add(int num1, int num2)
+        public static void GreetFriend(string friendName)
         {
-            return num1 + num2;
-        }
-        public static int Multiple(int num1, int num2)
-        { 
-            return (num1 * num2);
-        }
-        public static double Divide(double num1, double num2)
-        { 
-        return num1 /num2;
+            Console.WriteLine("Hi " + friendName + ", my friend!");
         }
     }
 }
