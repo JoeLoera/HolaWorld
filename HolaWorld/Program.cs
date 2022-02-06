@@ -17,11 +17,19 @@ namespace HolaWorld
             Console.WriteLine(Add(15, 31));
             //You can also use the method multiple times:
             Console.WriteLine(Add(Add(1,4), Add(1, 5)));
+            
+            //Challenge, create a method that multiplies 2 numbers together and print the result
+            Console.WriteLine(Multiple(23, 4));
             Console.Read();
+
         }
         public static int Add(int num1, int num2)
         {
             return num1 + num2;
+        }
+        public static int Multiple(int num1, int num2)
+        { 
+            return (num1 * num2);
         }
     }
 }
