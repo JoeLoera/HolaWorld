@@ -20,6 +20,8 @@ namespace HolaWorld
             
             //Challenge, create a method that multiplies 2 numbers together and print the result
             Console.WriteLine(Multiple(23, 4));
+            //Create a method that divides two numbers
+            Console.WriteLine(Divide(46,2));
             Console.Read();
 
         }
@@ -30,6 +32,10 @@ namespace HolaWorld
         public static int Multiple(int num1, int num2)
         { 
             return (num1 * num2);
+        }
+        public static double Divide(int num1, int num2)
+        { 
+        return num1 /num2;
         }
     }
 }
