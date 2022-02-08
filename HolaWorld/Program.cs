@@ -8,18 +8,21 @@ namespace HolaWorld
 
         static void Main(string[] args)
         {
-            string friend1 = "Frank";
-            string friend2 = "Kevin";
-            string friend3 = "Julie";
-
-            GreetFriend(friend1);
-            GreetFriend(friend2);
-            GreetFriend(friend3);
+            Console.WriteLine(Calculate());
             Console.Read();
         }
-        public static void GreetFriend(string friendName)
+        public static int Calculate()
         {
-            Console.WriteLine("Hi " + friendName + ", my friend!");
-        }
+            Console.WriteLine("Please enter the first number");
+            string number1Input = Console.ReadLine();
+            Console.WriteLine("Please enter the second number");
+            string number2Input = Console.ReadLine();
+
+            int num1 = int.Parse(number1Input); 
+            int num2 = int.Parse(number2Input); 
+
+            int result = num1 + num2;
+            return result;
+        } 
     }
 }
