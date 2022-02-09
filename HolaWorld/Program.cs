@@ -12,17 +12,20 @@ namespace HolaWorld
             string temperature = Console.ReadLine();
             int numTemp = int.Parse(temperature);
 
-            if (numTemp < 70) {
+            if (numTemp < 70)
+            {
                 Console.WriteLine("We NEED a coat!");
             }
-            if (numTemp == 70)
+            else if (numTemp == 70)
             {
                 Console.WriteLine("Coat optional!");
             }
-            if (numTemp > 70)
+            else
             {
                 Console.WriteLine("It is warm, we definitely don't need a coat!");
             }
+
+            Console.ReadKey();
         } 
     }
 }
