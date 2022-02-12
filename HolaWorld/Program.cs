@@ -8,33 +8,24 @@ namespace HolaWorld
 
         static void Main(string[] args)
         {
-            Console.WriteLine("What's the temperature like?");
-            string temperature = Console.ReadLine();
-            int numTemp;
-            int number;
-            if (int.TryParse(temperature, out number))
+            bool isAdmin = false;
+            bool isRegistered = true;
+            string userName = "";
+            Console.WriteLine("Please eneter your username");
+            userName = Console.ReadLine();
+            if (isRegistered) 
             {
-                numTemp = number;
+                Console.WriteLine("Hi there, registered user");
+                if (userName != "")
+                {
+                    Console.WriteLine("Hi there, " + userName);
+                    if (userName.Equals("admin"))
+                    {
+                        Console.WriteLine("Hi there, Admin");
+                    }
+                }
             }
-            else 
-            {
-                numTemp=0;
-                Console.WriteLine("Value entered was not a number. 0 set as temperature");
-            }
-            if (numTemp < 70)
-            {
-                Console.WriteLine("We NEED a coat!");
-            }
-            else if (numTemp == 70)
-            {
-                Console.WriteLine("Coat optional!");
-            }
-            else
-            {
-                Console.WriteLine("It is warm, we definitely don't need a coat!");
-            }
-
-            Console.ReadKey();
+            Console.Read();
         } 
     }
 }
