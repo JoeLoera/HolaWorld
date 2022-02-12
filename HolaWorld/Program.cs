@@ -5,24 +5,46 @@ namespace HolaWorld
 
     class Program
     {
+        static string username;
+        static string password;
 
         static void Main(string[] args)
         {
-            bool isAdmin = false;
-            bool isRegistered = true;
-            string userName = "";
-            Console.WriteLine("Please eneter your username");
-            userName = Console.ReadLine();
-            
-            //When coding and writing if statements, we should always aim to make the code more legible and easy to read/understand
-            if (isRegistered && userName != "" && userName.Equals("admin")) 
-            {
-                    Console.WriteLine("Hi there, registered user");
-                    Console.WriteLine("Hi there "+ userName);
-                    Console.WriteLine("Hi there, admin");
-             
-            }
+            Register();
+            Login();
             Console.Read();
-        } 
+        }
+
+        public static void Register()
+        {
+            Console.WriteLine("Please eneter your username");
+            username = Console.ReadLine();
+            Console.WriteLine("Please eneter your password");
+            password = Console.ReadLine();
+            Console.WriteLine("Registration completed");
+            Console.WriteLine("----------------------------------");
+        }
+
+        public static void Login()
+        {
+            Console.WriteLine("Please eneter your username");
+            if (username == Console.ReadLine())
+            {
+                Console.WriteLine("Please eneter your password");
+                if (password == Console.ReadLine())
+                {
+                    Console.WriteLine("login successful");
+                }
+                else
+                {
+                    Console.WriteLine("login failed, wrong password. Restart program");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Login failed, wrong username. Restart program");
+            }
+        }
     }
 }
