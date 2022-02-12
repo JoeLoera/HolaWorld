@@ -10,8 +10,17 @@ namespace HolaWorld
         {
             Console.WriteLine("What's the temperature like?");
             string temperature = Console.ReadLine();
-            int numTemp = int.Parse(temperature);
-
+            int numTemp;
+            int number;
+            if (int.TryParse(temperature, out number))
+            {
+                numTemp = number;
+            }
+            else 
+            {
+                numTemp=0;
+                Console.WriteLine("Value entered was not a number. 0 set as temperature");
+            }
             if (numTemp < 70)
             {
                 Console.WriteLine("We NEED a coat!");
