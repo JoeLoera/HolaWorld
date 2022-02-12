@@ -13,17 +13,14 @@ namespace HolaWorld
             string userName = "";
             Console.WriteLine("Please eneter your username");
             userName = Console.ReadLine();
-            if (isRegistered) 
+            
+            //When coding and writing if statements, we should always aim to make the code more legible and easy to read/understand
+            if (isRegistered && userName != "" && userName.Equals("admin")) 
             {
-                Console.WriteLine("Hi there, registered user");
-                if (userName != "")
-                {
-                    Console.WriteLine("Hi there, " + userName);
-                    if (userName.Equals("admin"))
-                    {
-                        Console.WriteLine("Hi there, Admin");
-                    }
-                }
+                    Console.WriteLine("Hi there, registered user");
+                    Console.WriteLine("Hi there "+ userName);
+                    Console.WriteLine("Hi there, admin");
+             
             }
             Console.Read();
         } 
