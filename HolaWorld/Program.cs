@@ -33,6 +33,25 @@ namespace HolaWorld
             {
                 Console.WriteLine("Hold old are you then?");
             }
+
+            string username = "Frank";
+
+            switch (username)
+            {
+                case "Joe":
+                    Console.WriteLine("username is Joe");
+                    break;                
+                case "root":
+                    Console.WriteLine("username is root");
+                    break;
+                default:
+                    Console.WriteLine("username is unknown");
+                    break;
+
+
+
+            }
+
             Console.ReadLine();
         }
     }
