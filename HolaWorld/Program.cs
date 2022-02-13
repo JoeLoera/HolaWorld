@@ -20,6 +20,20 @@ namespace HolaWorld
                     Console.WriteLine("How old are you then?");
                     break;
             }
+            //if statement version
+            if (age == 15)
+            {
+                Console.WriteLine("To young to party in the club");
+            }
+            else if (age == 25)
+            {
+                Console.WriteLine("Good to go!");
+            }
+            else
+            {
+                Console.WriteLine("Hold old are you then?");
+            }
+            Console.ReadLine();
         }
     }
 }
