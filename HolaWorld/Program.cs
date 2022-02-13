@@ -4,55 +4,32 @@ namespace HolaWorld
 {
 
     class Program
-    { 
+    {
+        static int highscore = 300;
+        static string highscorePlayer = "Joe";
         static void Main(string[] args)
         {
-            int age = 19;
-            switch (age) 
+            CheckHighscore(250, "Maria");
+            CheckHighscore(315, "Michael");
+            CheckHighscore(350, "Joe");
+
+            Console.Read();
+        }
+
+        public static void CheckHighscore(int score, string playerName)
+        {
+            if (score > highscore)
             {
-                case 15:
-                    Console.WriteLine("Too young to party in the club");
-                    break;
-                case 25:
-                    Console.WriteLine("Good to go!");
-                    break;
-                default:
-                    Console.WriteLine("How old are you then?");
-                    break;
-            }
-            //if statement version
-            if (age == 15)
-            {
-                Console.WriteLine("To young to party in the club");
-            }
-            else if (age == 25)
-            {
-                Console.WriteLine("Good to go!");
+                highscore = score;
+                highscorePlayer = playerName;
+
+                Console.WriteLine("New highscore is " + score);
+                Console.WriteLine("It is now held by " + playerName);
             }
             else
             {
-                Console.WriteLine("Hold old are you then?");
+                Console.WriteLine("The old highscore could not be broken. It is still " + highscore +" and held by " + highscorePlayer);
             }
-
-            string username = "Frank";
-
-            switch (username)
-            {
-                case "Joe":
-                    Console.WriteLine("username is Joe");
-                    break;                
-                case "root":
-                    Console.WriteLine("username is root");
-                    break;
-                default:
-                    Console.WriteLine("username is unknown");
-                    break;
-
-
-
-            }
-
-            Console.ReadLine();
         }
     }
 }
