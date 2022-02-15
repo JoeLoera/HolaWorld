@@ -5,31 +5,39 @@ namespace HolaWorld
 
     class Program
     {
-        static int highscore = 300;
-        static string highscorePlayer = "Joe";
-        static void Main(string[] args)
+       static void Main(string[] args)
         {
-            CheckHighscore(250, "Maria");
-            CheckHighscore(315, "Michael");
-            CheckHighscore(350, "Joe");
+            //condition ? first_expressiom : second_expression;
+            //condition has to be either true or false
+            //The conditional operator is right - associative
+            //the expression a ? b: c? d:e
+            //is evaluated as a ? b: (c ? d : e),
+            //not as (a? b : c) ? d: e.
+            //The conditional operator cannot be overloaded
 
-            Console.Read();
-        }
+            int temperature = 200;
+            string stateOfMatter;
 
-        public static void CheckHighscore(int score, string playerName)
-        {
-            if (score > highscore)
-            {
-                highscore = score;
-                highscorePlayer = playerName;
+            if (temperature < 0)
 
-                Console.WriteLine("New highscore is " + score);
-                Console.WriteLine("It is now held by " + playerName);
-            }
+                stateOfMatter = "solid";
             else
-            {
-                Console.WriteLine("The old highscore could not be broken. It is still " + highscore +" and held by " + highscorePlayer);
-            }
+                stateOfMatter = "liquid";
+
+            Console.WriteLine("State of matter is {0}", stateOfMatter);
+
+            temperature += 30;
+
+            //in short:
+            stateOfMatter = temperature < 0 ? "solid" : "liquid";
+            Console.WriteLine("State of matter is {0}", stateOfMatter);
+
+            //challenge - add the gas state of matter to the options
+            stateOfMatter = temperature > 100 ? "gas" : temperature < 0 ? "solid" : "liquid";
+            Console.WriteLine("Stateo of matter is {0}", stateOfMatter);
+
+            Console.ReadKey();
+            
         }
     }
 }
