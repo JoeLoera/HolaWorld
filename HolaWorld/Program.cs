@@ -7,11 +7,10 @@ namespace HolaWorld
     {
        static void Main(string[] args)
         {
-            for (int counter = 0; counter < 50; counter+=5)
+            for (int counter = 1; counter < 20; counter+=2)
             { 
                 Console.WriteLine(counter);
             }
-            Console.WriteLine("For loop is done");
             Console.Read();
         }
     }
