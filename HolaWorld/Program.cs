@@ -7,37 +7,41 @@ namespace HolaWorld
     {
        static void Main(string[] args)
         {
-            //condition ? first_expressiom : second_expression;
-            //condition has to be either true or false
-            //The conditional operator is right - associative
-            //the expression a ? b: c? d:e
-            //is evaluated as a ? b: (c ? d : e),
-            //not as (a? b : c) ? d: e.
-            //The conditional operator cannot be overloaded
+            int inputTemperature = 0;
+            string temperatureMessage = string.Empty;
+            string inputValue = string.Empty;
 
-            int temperature = 200;
-            string stateOfMatter;
+            //takes input from console
+            Console.WriteLine("Enter the current temperature : ");
+            inputValue = Console.ReadLine();
 
-            if (temperature < 0)
+            //validate the input as valid input integer value
+            bool validInteger = int.TryParse(inputValue, out inputTemperature);
 
-                stateOfMatter = "solid";
+            if (validInteger)
+            {
+                //if is valid integer then it will check for the conditions 
+                temperatureMessage = inputTemperature <= 15 ?
+                    //true
+                    "it is too cold here" :
+                    //false
+                    (inputTemperature >= 16 && inputTemperature <= 28) ? 
+                    //true
+                    "it is cold here" : 
+                    //false
+                    inputTemperature > 28 ?
+                    //true
+                    "it is hot here" : 
+                    //false
+                    "";
+                Console.WriteLine(temperatureMessage);
+            }
             else
-                stateOfMatter = "liquid";
-
-            Console.WriteLine("State of matter is {0}", stateOfMatter);
-
-            temperature += 30;
-
-            //in short:
-            stateOfMatter = temperature < 0 ? "solid" : "liquid";
-            Console.WriteLine("State of matter is {0}", stateOfMatter);
-
-            //challenge - add the gas state of matter to the options
-            stateOfMatter = temperature > 100 ? "gas" : temperature < 0 ? "solid" : "liquid";
-            Console.WriteLine("Stateo of matter is {0}", stateOfMatter);
-
+            { 
+                //in case if the input value is not a valid temperature.
+                Console.WriteLine("Not a valid temperature");
+            }
             Console.ReadKey();
-            
         }
     }
 }
