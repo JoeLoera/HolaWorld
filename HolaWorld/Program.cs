@@ -7,15 +7,11 @@ namespace HolaWorld
     {
         static void Main(string[] args)
         {
-            Human sissy = new Human();
-            sissy.firstName = "Sissy";
-            sissy.lastName = "Wagner";
-            sissy.IntroduceMyself();
+            Human joe = new Human("Joe","Loera","brown", 29);
+            joe.IntroduceMyself();
 
-            Human franz1 = new Human();
-            franz1.firstName = "Franzil";
-            franz1.lastName = "Ryan";
-            franz1.IntroduceMyself();
+            Human julie = new Human("Julie", "Delgadillo", "purple", 1);
+            julie.IntroduceMyself();
 
             Console.ReadKey();
         }
