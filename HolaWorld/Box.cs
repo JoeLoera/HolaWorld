@@ -10,9 +10,62 @@ namespace HolaWorld
     {
         //member variable
         private int length = 3;
-        public int height;
-        public int width;
-        public int volume;
+        private int height;
+        //public int width;
+        private int volume;
+
+        
+        public int Volume
+        {
+            get
+            {
+                return this.length * this.height * this.Width;
+            }
+        }
+        
+        public int Width { get; set; }
+        /*
+        public int Width
+        {
+            get 
+            {
+                return this.width;
+            }
+            set 
+            {
+                this.width = value;
+            }
+        }*/
+
+
+        //properties should have a capital letter "Height"
+        public int Height
+        {
+            get
+            { 
+                return height;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    height = -value;
+                }
+                else
+                {
+                    height = value;
+                }
+            }
+        }
+
+        public Box(int length, int height, int width)
+        { 
+            this.length = length;
+            this.height = height;
+            this.Width = width;
+
+
+        }
 
         public void SetLength(int length)
         {
@@ -27,15 +80,10 @@ namespace HolaWorld
         {
             return this.length;
         }
-
-        public int GetVolume()
-        { 
-            return this.length * this.height * this.width;
-        }
         public void DisplayInfo()
         {
             Console.WriteLine("Length is {0} and height is {1} and width is {2} so the volume is {3}", 
-                length, height, width, volume = length*height*width);
+                length, height, Width, volume = length*height*Width);
         }
     }
 }
