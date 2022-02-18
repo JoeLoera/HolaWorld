@@ -25,10 +25,39 @@ namespace HolaWorld
         private string eyeColor;
         private int myAge;
 
-        //constructor
-        public Human(string myFirstName, string lastName, string eyeColor, int myAge)
+        //default constructor
+        public Human()
+        {
+            Console.WriteLine("Constructor called. Object created" );
+        }
+
+        public Human(string firstName)
+        {
+            this.firstName = firstName;
+        }
+        public Human(string firstName, string lastName)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        public Human(string firstName, string lastName, int myAge)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.myAge = myAge;
+        }
+        public Human(string firstName, string lastName, string eyeColor)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.eyeColor = eyeColor;
+        }
+
+        //parameterized constructor
+        public Human(string firstName, string lastName, string eyeColor, int myAge)
         { 
-            firstName = myFirstName;
+            this.firstName = firstName;
             this.lastName = lastName;
             this.eyeColor = eyeColor;
             this.myAge = myAge;
@@ -37,10 +66,24 @@ namespace HolaWorld
         //member method
         public void IntroduceMyself()
         {
-            if (myAge == 1)
-                Console.WriteLine("Hi, I'm {0} {1}. I have {2} eyes and I am {3} year old.", firstName, lastName, eyeColor, myAge);
-            else
-                Console.WriteLine("Hi, I'm {0} {1}. I have {2} eyes and I am {3} years old.", firstName, lastName, eyeColor, myAge);
+            if (myAge != 0 && lastName != null && firstName != null)
+                Console.WriteLine("Hi, I'm {0} {1} and {2} years old. My eye color is {3}.", firstName, lastName, myAge, eyeColor);
+            else if (myAge != 0 && lastName != null && firstName != null)
+            {
+                Console.WriteLine("Hi, I'm {0} {1}. I am {2} years old.", firstName, lastName, myAge);
+            }
+            else if (lastName != null && firstName != null)
+            {
+                Console.WriteLine("Hi, I'm {0} {1}.", firstName, lastName);
+            }
+            else if (firstName != null)
+            {
+                Console.WriteLine("Hi, I'm {0}.", firstName);
+            }
+            else if (firstName != null && lastName != null && myAge != 0)
+            {
+                Console.WriteLine("Hi,I am {0} {1}. I am {2} years old.");
+            }
         }
     }
 }
